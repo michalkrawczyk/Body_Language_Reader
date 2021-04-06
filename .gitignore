@@ -131,3 +131,5 @@ dmypy.json
 
 # Config files won't be stored at github
 *.yaml
+test.py
+Notes/
