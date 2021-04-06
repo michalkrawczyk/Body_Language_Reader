@@ -1,5 +1,5 @@
 import unittest
-from Config_and_Utils import softmax
+from utils import softmax
 import numpy as np
 
 
