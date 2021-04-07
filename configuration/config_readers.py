@@ -1,4 +1,4 @@
-from utils import read_yaml
+from util import read_yaml
 from .definitions import WEIGHTS_YAML, CLASSES_YAML
 import numpy as np
 import pandas as pd
@@ -7,7 +7,7 @@ import pandas as pd
 def read_weights():
     """
     Reads yaml with weights and meanings
-    :return gesture_weight_dict - weights list for specific gesture (by gesture's id)
+    :return gesture_weight_dict - weights list for meanings in each gesture (by gesture's id)
             meaning_id_dict - meanings with their ids
     """
     data_dict = read_yaml(WEIGHTS_YAML)
@@ -39,7 +39,6 @@ def read_classes():
     classes_names = data_dict['names']
     classes_count = data_dict['nc']
 
-    assert (isinstance(classes_count, int))
     assert (classes_count == len(classes_names))
 
     return classes_names, classes_count

@@ -1,1 +1,2 @@
--r Requirements/utils&config.txt
+-r requirements/utils&config.txt
+-r requirements/detection.txt

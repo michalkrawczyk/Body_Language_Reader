@@ -133,3 +133,4 @@ dmypy.json
 *.yaml
 test.py
 Notes/
+*.pt
