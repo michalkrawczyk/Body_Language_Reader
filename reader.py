@@ -15,9 +15,9 @@ def read_from_img(img):
     :param img: image file
     :return: list of pairs [meaning_id, probability]
     """
-    if img == "None":
-        warn("Please provide first path to image by adding argument --img")
-        return None
+    # if img == "None":
+    #     warn("Please provide first path to image by adding argument --img")
+    #     return None
 
     gestures, meanings = read_weights()
     classes, _ = read_classes()
@@ -53,4 +53,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--img', type=str, default='None', help='path to image')
     opt = parser.parse_args()
-    print(read_from_img(opt.img))
+    if opt.img != 'None':
+        read_from_img(opt.img)
+    else:
+        warn("Please provide first path to image by adding argument --img")
